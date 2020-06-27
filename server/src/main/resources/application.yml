@@ -1,0 +1,21 @@
+eureka:
+  instance:
+    preferIpAddress: true  #将本服务IP注册到注册中心
+  client:
+    registerWithEureka: true  #使用eureka注册服务
+    fetchRegistry: true #在本地缓存注册列表
+    serviceUrl:
+      defaultZone: http://127.0.0.1:20001/eureka/ #注册中心地址
+
+
+spring:
+  application:
+    name: organizationservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+server:
+  port: 8087

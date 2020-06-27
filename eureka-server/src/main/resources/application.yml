@@ -1,0 +1,12 @@
+server:
+  port: 20001
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    appname: eureka-server      #服务注册中心名称
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}  #服务注册中心IP
+    registerWithEureka: false   #不能注册自身
+    fetchRegistry: false
